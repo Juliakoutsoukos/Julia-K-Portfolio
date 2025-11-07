@@ -77,3 +77,42 @@ if (filters.length) {
     });
   });
 }
+// Year stamp (already present in your file)
+const yEl = document.getElementById('y');
+if (yEl) yEl.textContent = new Date().getFullYear();
+
+// Contact form helpers
+const form = document.querySelector('form[name="contact"]');
+if (form) {
+  const email = form.querySelector('#email');
+  const nameEl = form.querySelector('#name');
+  const msg = form.querySelector('#message');
+  const consent = form.querySelector('#consent');
+  const errors = form.querySelector('#form-errors');
+  const counter = form.querySelector('#msg-count');
+
+  // live character counter
+  if (msg && counter) {
+    const updateCount = () => { counter.textContent = `${msg.value.length} / ${msg.maxLength}`; };
+    msg.addEventListener('input', updateCount);
+    updateCount();
+  }
+
+  form.addEventListener('submit', (e) => {
+    errors.textContent = '';
+
+    // simple checks
+    const issues = [];
+    if (!nameEl.value.trim()) issues.push('Please enter your name.');
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) issues.push('Please enter a valid email.');
+    if (!msg.value.trim()) issues.push('Please add a short message.');
+    if (!consent.checked) issues.push('Please confirm you’re okay with being contacted.');
+
+    if (issues.length) {
+      e.preventDefault();
+      errors.textContent = issues.join(' ');
+      // focus the first invalid field
+      ( !nameEl.value.trim() ? nameEl : !email.value.trim() ? email : !msg.value.trim() ? msg : consent ).focus();
+    }
+  });
+}

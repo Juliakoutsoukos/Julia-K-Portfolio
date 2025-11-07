@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Julia Koutsoukos</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="contact">
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Julia Koutsoukos</span>
+      </a>
+      <div class="nav-links">
+        <a href="work.html">Work</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a class="btn primary" href="resume.html">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-hero">
+    <div class="container">
+      <div class="section-head">
+        <h1 class="work-title">Get in touch</h1>
+        <p class="work-sub">I’m open to UX/HCI internships, research collabs, and portfolio feedback.</p>
+      </div>
+
+      <!-- Quick contact cards -->
+      <div class="contact-grid" role="list">
+        <a class="contact-card glass-card" role="listitem" href="mailto:youremail@example.com">
+          <div class="cc-title">Email</div>
+          <div class="cc-sub">youremail@example.com</div>
+        </a>
+        <a class="contact-card glass-card" role="listitem" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <div class="cc-title">LinkedIn</div>
+          <div class="cc-sub">/your-handle</div>
+        </a>
+        <a class="contact-card glass-card" role="listitem" href="https://github.com/" target="_blank" rel="noopener">
+          <div class="cc-title">GitHub</div>
+          <div class="cc-sub">@your-handle</div>
+        </a>
+      </div>
+
+      <!-- Contact form (Netlify-ready) -->
+      <section aria-labelledby="contact-form-title" class="contact-form-wrap">
+        <h2 id="contact-form-title" class="sr-only">Contact form</h2>
+
+        <form
+          class="form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="contact-success.html"
+          novalidate
+          aria-describedby="form-desc form-errors"
+        >
+          <!-- Netlify form id -->
+          <input type="hidden" name="form-name" value="contact" />
+          <!-- Honeypot -->
+          <p class="hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
+
+          <p id="form-desc" class="muted">Fields marked * are required.</p>
+          <div id="form-errors" class="form-errors" aria-live="polite"></div>
+
+          <div class="field">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" required autocomplete="name" class="input" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required autocomplete="email" class="input" />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" class="input" />
+          </div>
+
+          <div class="field">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required rows="6" maxlength="1500" class="textarea"></textarea>
+            <div class="counter" id="msg-count">0 / 1500</div>
+          </div>
+
+          <div class="field check">
+            <input id="consent" name="consent" type="checkbox" required />
+            <label for="consent">You can contact me about this inquiry. *</label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <a class="btn ghost" href="mailto:youremail@example.com">Email instead</a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot">© <span id="y"></span> Julia Koutsoukos</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
