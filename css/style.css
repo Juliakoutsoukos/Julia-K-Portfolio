@@ -89,11 +89,11 @@ img { max-width: 100%; height: auto; display: block; }
   background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
 }
 .hero-center { position: relative; display:grid; place-items:center; min-height:58vh; }
-.glass-wrap { position: relative; width:min(760px,92vw); aspect-ratio: 1/1; display:grid; place-items:center; }
+.glass-wrap { position: relative; width:min(820px,92vw); aspect-ratio: 1.5/1; display:grid; place-items:center; }
 
 /* Glass Button orb */
 .glass-orb {
-  position: absolute; inset: 0; margin: auto; border-radius: 50%;
+  position: absolute; inset: 0; margin: auto; border-radius: 30%;
   background: rgba(255,255,255,0.03);
   backdrop-filter: blur(22px) saturate(165%) brightness(1.08);
   -webkit-backdrop-filter: blur(22px) saturate(165%) brightness(1.08);
