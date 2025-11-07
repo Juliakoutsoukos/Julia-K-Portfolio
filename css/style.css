@@ -164,7 +164,7 @@ img { max-width: 100%; height: auto; display: block; }
 h1 {
   font-family: "Space Grotesk", Inter, ui-sans-serif;
   font-weight: 700;
-  font-size: clamp(32px, 5vw, 60px);
+  font-size: clamp(28px, 4.5vw, 52px);
   line-height: 1.1;
   margin: 0;
 }
