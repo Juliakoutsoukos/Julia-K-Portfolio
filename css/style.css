@@ -212,3 +212,84 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
     scroll-behavior: auto !important;
   }
 }
+/* ===============================
+   Work page
+   =============================== */
+.work-hero{ padding: var(--space-lg) var(--space) var(--space-lg); }
+.section-head{ display:grid; gap:8px; margin-bottom: clamp(18px, 2.5vw, 28px);}
+.work-title{ font-family:"Space Grotesk", Inter, ui-sans-serif; font-size: clamp(28px, 4.8vw, 42px); margin:0; }
+.work-sub{ color: var(--muted); margin:0; }
+
+.filters{
+  display:flex; flex-wrap:wrap; gap:10px; margin: 16px 0 20px;
+}
+.filter{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:14px;
+  cursor:pointer;
+  transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.filter:hover{ transform: translateY(-1px); }
+.filter.is-active{
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+  box-shadow: 0 0 0 3px rgba(255,78,205,.12);
+}
+
+.work-grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(14px, 2vw, 22px);
+}
+
+/* Card */
+.wcard{
+  grid-column: span 12;
+  display:grid;
+  grid-template-columns: 1fr;
+  border:1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow:hidden;
+  background:#fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .12s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+}
+.wcard:hover{ transform: translateY(-4px); box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--accent) 18%, var(--line)); }
+
+.wthumb{
+  min-height: 160px;
+  background:
+    linear-gradient(180deg, #fafbfe, #f3f5fa);
+  display:grid; place-items:center; color:#9aa0aa; font-size:13px;
+}
+
+/* Liquid-glass face for cards (very subtle) */
+.glass-card{
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid #e9ecf3;
+}
+.glass-card .wthumb{
+  background:
+    linear-gradient(180deg, #f8f9fb, #f2f4f8);
+}
+
+.wbody{ padding: clamp(16px, 2.2vw, 22px); display:grid; gap:10px; }
+.eyebrow{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color: var(--muted); }
+.wtitle{ font-family:"Space Grotesk", Inter, ui-sans-serif; font-size: clamp(18px, 2.6vw, 24px); margin:0; }
+.wmeta{ color: var(--muted); font-size: 13px; margin:0; }
+.wdesc{ margin:0; color:#333; }
+
+.wactions{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 4px; }
+.btn.ghost{ background:#fff; border:1px solid var(--line); }
+
+/* Responsive columns */
+@media (min-width: 720px){
+  .wcard{ grid-column: span 6; }
+}
+@media (min-width: 1040px){
+  .wcard{ grid-column: span 4; }
+}

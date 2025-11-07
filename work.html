@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work — Julia Koutsoukos</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="work">
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Julia Koutsoukos</span>
+      </a>
+      <div class="nav-links">
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn primary" href="resume.html">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="work-hero">
+    <div class="container">
+      <div class="section-head">
+        <h1 class="work-title">Selected Work</h1>
+        <p class="work-sub">Case studies and prototypes across HCD, UX research, and front-end.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters" role="tablist" aria-label="Filter projects">
+        <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter" data-filter="ux" role="tab" aria-selected="false">UX / UI</button>
+        <button class="filter" data-filter="research" role="tab" aria-selected="false">Research</button>
+        <button class="filter" data-filter="web" role="tab" aria-selected="false">Web</button>
+      </div>
+
+      <!-- Grid -->
+      <section class="work-grid" aria-live="polite">
+        <!-- CARD 1 -->
+        <article class="wcard glass-card" data-cat="ux web">
+          <div class="wthumb" aria-hidden="true">img/video</div>
+          <div class="wbody">
+            <div class="eyebrow">Case Study</div>
+            <h2 class="wtitle">Student Wellness App — Prototype</h2>
+            <p class="wmeta">Figma components, motion, accessibility · Fall 2025</p>
+            <p class="wdesc">Personalized workouts, privacy choices, and MSU events. Built with component variants, interactive sliders, and toolbar patterns.</p>
+            <div class="wactions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Open Figma</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noopener">Read case</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="wcard glass-card" data-cat="web">
+          <div class="wthumb" aria-hidden="true">img</div>
+          <div class="wbody">
+            <div class="eyebrow">Web</div>
+            <h2 class="wtitle">MI 349 Portfolio Site (Rebuild)</h2>
+            <p class="wmeta">HTML/CSS · Netlify · Summer 2025</p>
+            <p class="wdesc">Clean, accessible portfolio with liquid-glass hero and reusable component tokens.</p>
+            <div class="wactions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Live site</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="wcard glass-card" data-cat="research ux">
+          <div class="wthumb" aria-hidden="true">img</div>
+          <div class="wbody">
+            <div class="eyebrow">Research</div>
+            <h2 class="wtitle">Yoga × Social Media — Study</h2>
+            <p class="wmeta">Methods: interviews, lit review · 2025</p>
+            <p class="wdesc">Explores how mobile apps shape wellness motivation and data privacy attitudes among students.</p>
+            <div class="wactions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Summary</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot">© <span id="y"></span> Julia Koutsoukos</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

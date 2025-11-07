@@ -54,3 +54,26 @@ if (orb && !prefersReduced) {
   }
   requestAnimationFrame(tick);
 }
+// Year (already in your file)
+const yEl = document.getElementById('y');
+if (yEl) yEl.textContent = new Date().getFullYear();
+
+// Simple Work page filters
+const filters = document.querySelectorAll('.filter');
+const cards = document.querySelectorAll('.wcard');
+
+if (filters.length) {
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // active state
+      filters.forEach(b => { b.classList.toggle('is-active', b === btn); });
+      const sel = btn.dataset.filter;
+
+      cards.forEach(card => {
+        if (sel === 'all') { card.style.display = ''; return; }
+        const cats = (card.dataset.cat || '').split(' ');
+        card.style.display = cats.includes(sel) ? '' : 'none';
+      });
+    });
+  });
+}
