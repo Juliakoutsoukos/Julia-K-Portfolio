@@ -584,7 +584,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
 }
 .video-player {
   width: 100%;        /* scales with screen */
-  max-width: 320px;   /* change this number to make it bigger/smaller */
+  max-width: 400px;   /* change this number to make it bigger/smaller */
   height: auto;
   border-radius: 1rem;
   display: block;
