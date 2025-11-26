@@ -49,6 +49,44 @@ img { max-width: 100%; height: auto; display: block; }
 .container { width: min(100% - 2*var(--space), var(--maxw)); margin-inline: auto; }
 
 /* ===============================
+   Page Transitions
+   =============================== */
+body.page-enter {
+  animation: pageFadeIn 260ms ease-out;
+}
+
+body.page-exit {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   Scroll Progress Bar
+   =============================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--accent, #ff4ecd);
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* ===============================
    Header / Nav
    =============================== */
 .site-header{
@@ -283,16 +321,29 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   }
 }
 
-/* Card – small, clean */
+/* Card – small, clean + animated */
 .wcard {
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: #fff;
   box-shadow: var(--shadow-sm);
-  transition: transform .12s var(--ease),
-              box-shadow .2s var(--ease),
-              border-color .2s var(--ease);
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    border-color 200ms var(--ease),
+    opacity 220ms var(--ease);
+}
+
+/* Scroll reveal states */
+.wcard--hidden {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+}
+
+.wcard--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .wcard:hover {
@@ -389,6 +440,8 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   background:#fff;
   text-decoration:none;
   color:inherit;
+  cursor: pointer;
+  transform-style: preserve-3d;
   transition: transform .12s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
 }
 .contact-card:hover{
@@ -403,7 +456,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   .contact-card{ grid-column: span 4; }
 }
 
-/* Form */
+/* Form (unused right now, but kept if you add it later) */
 .contact-form-wrap{ margin-top: clamp(12px, 2vw, 20px); }
 
 .form{
@@ -640,3 +693,4 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   border-radius: 1rem;
   display: block;
 }
+
