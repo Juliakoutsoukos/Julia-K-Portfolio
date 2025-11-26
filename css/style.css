@@ -235,7 +235,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   margin: 0;
 }
 
-/* Filters row */
+/* Filters */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -262,25 +262,37 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   box-shadow: 0 0 0 3px rgba(255,78,205,.12);
 }
 
-/* Grid that auto-fits cards, same width per row */
+/* Grid – small cards side by side */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(16px, 2.2vw, 24px);
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: clamp(14px, 2vw, 22px);
 }
 
-/* Card */
+/* 2 cards per row on medium screens */
+@media (min-width: 720px) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 3 cards per row on large screens */
+@media (min-width: 1040px) {
+  .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Card – small, clean */
 .wcard {
-  display: flex;
-  flex-direction: column;
-  height: 100%;               /* all cards equal height in a row */
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: #fff;
   box-shadow: var(--shadow-sm);
-  transition: transform .12s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+  transition: transform .12s var(--ease),
+              box-shadow .2s var(--ease),
+              border-color .2s var(--ease);
 }
 
 .wcard:hover {
@@ -289,17 +301,16 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   border-color: color-mix(in srgb, var(--accent) 18%, var(--line));
 }
 
-/* Image area – SAME SIZE for every card */
+/* Thumbnail – fixed small height */
 .wthumb {
   width: 100%;
-  aspect-ratio: 4 / 3;         /* change this if you want taller/shorter cards */
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  overflow: hidden;
+  height: 140px;      /* ← make this bigger/smaller if you want */
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .wthumb img {
@@ -311,10 +322,8 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
 /* Card body */
 .wbody {
   padding: clamp(16px, 2.2vw, 22px);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;                    /* stretch to fill card height */
+  display: grid;
+  gap: 8px;
 }
 
 .eyebrow {
@@ -326,7 +335,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
 
 .wtitle {
   font-family: "Space Grotesk", Inter, ui-sans-serif;
-  font-size: clamp(18px, 2.6vw, 24px);
+  font-size: clamp(18px, 2.6vw, 22px);
   margin: 0;
 }
 
@@ -341,15 +350,14 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   color: #333;
 }
 
-/* Actions row sits at the bottom so all buttons line up */
 .wactions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: auto;
+  margin-top: 4px;
 }
 
-/* Liquid-glass variation */
+/* Liquid-glass option (optional) */
 .glass-card {
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(12px) saturate(120%);
