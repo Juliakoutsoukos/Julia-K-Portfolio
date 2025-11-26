@@ -490,7 +490,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   margin-top: 4px;
 }
 
-/* Liquid-glass option (optional) */
+/* Liquid-glass option */
 .glass-card {
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(12px) saturate(120%);
@@ -538,7 +538,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   .contact-card{ grid-column: span 4; }
 }
 
-/* Form (unused right now, but kept if you add it later) */
+/* Form (kept for future, unused now) */
 .contact-form-wrap{ margin-top: clamp(12px, 2vw, 20px); }
 
 .form{
@@ -632,4 +632,146 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
 
 /* Skills grid */
 .skills-grid{
-  display:grid; gap: clamp(12px, 2vw, 18px
+  display:grid; gap: clamp(12px, 2vw, 18px);
+  grid-template-columns: 1fr;
+}
+.card{
+  border-radius: var(--radius-xl);
+  border:1px solid #e9ecf3;
+  background:#fff;
+  box-shadow: var(--shadow-sm);
+  padding: clamp(14px, 2vw, 20px);
+}
+.card h3{ margin:0 0 8px; font-size: 16px; font-weight:700; }
+.list{ margin:0; padding-left: 18px; }
+.list li{ margin: 6px 0; }
+
+/* Chips */
+.chiplist{ display:flex; gap:10px; flex-wrap:wrap; padding:0; margin:0; list-style:none; }
+.chiplist .chip{ background:#f4f5f7; border:1px solid #e6e8ee; }
+
+/* Values */
+.values{ display:grid; gap: clamp(12px, 2vw, 18px); grid-template-columns: 1fr; }
+.value{ padding: clamp(14px, 2vw, 20px); border-radius: var(--radius-xl); }
+.value h3{ margin:0 0 6px; }
+
+/* Timeline */
+.timeline{
+  list-style:none; padding:0; margin:0;
+  display:grid; gap: 14px;
+  border-left: 2px solid #eceff5;
+  padding-left: 16px;
+}
+.timeline li{ position:relative; }
+.timeline li::before{
+  content:""; position:absolute; left:-10px; top:6px;
+  width:10px; height:10px; border-radius:50%;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  box-shadow: 0 0 0 3px rgba(255,78,205,.15);
+}
+.timeline .time{ font-weight:700; font-size: 13px; color: var(--muted); }
+.timeline .t-body h4{ margin:2px 0 4px; font-size: 16px; }
+.timeline .t-body p{ margin:0; color:#333; }
+
+/* Responsive grids */
+@media (min-width: 860px){
+  .skills-grid{ grid-template-columns: 1fr 1fr 1fr; }
+  .values{ grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* ===============================
+   Assignment / Project Gallery
+   =============================== */
+.assignment-gallery {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .12s var(--ease), box-shadow .2s var(--ease);
+}
+
+.gallery-thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder for when you don't have a screenshot yet */
+.gallery-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.gallery-info {
+  padding: 1rem 1.1rem 1.1rem 1.1rem;
+}
+
+.gallery-info h2 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-meta {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Hover effect for tiles */
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Project gallery groups */
+.project-gallery {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.gallery-group h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 480px;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* Video player */
+.video-player {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+}
