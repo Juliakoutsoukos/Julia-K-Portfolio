@@ -588,26 +588,3 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   height: auto;
   border-radius: 1rem;
   display: block;
-}
-.wthumb {
-  width: 100%;
-  height: 160px;
-  border-radius: 1rem;
-  overflow: hidden;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.wthumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.wcard:hover .wthumb img {
-  transform: scale(1.03);
-  transition: 0.35s ease;
-}
