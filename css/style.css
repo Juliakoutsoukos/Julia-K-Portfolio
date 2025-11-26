@@ -788,3 +788,7 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
   border-radius: 1rem;
   display: block;
 }
+.hero,
+.home-section {
+  will-change: transform;
+}

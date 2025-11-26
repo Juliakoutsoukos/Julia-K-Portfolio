@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPageTransitions();
   initScrollProgress();
   initContactCardTilt();
+  initHomeScrollEffects(); // fun scroll ONLY on home
 });
 
 // ------------------------------
@@ -166,7 +167,6 @@ function initWorkFilters() {
 
 // ------------------------------
 // 5. Page transitions (all pages)
-//    - Fade/slide between .html pages
 // ------------------------------
 function initPageTransitions() {
   const body = document.body;
@@ -186,7 +186,6 @@ function initPageTransitions() {
 
   links.forEach((link) => {
     link.addEventListener("click", (e) => {
-      // Ignore modified clicks (cmd+click, etc.)
       if (
         e.metaKey ||
         e.ctrlKey ||
@@ -263,8 +262,8 @@ function initContactCardTilt() {
       const x = e.clientX - r.left;
       const y = e.clientY - r.top;
 
-      const nx = (x / r.width) - 0.5;  // -0.5..0.5
-      const ny = (y / r.height) - 0.5; // -0.5..0.5
+      const nx = x / r.width - 0.5;  // -0.5..0.5
+      const ny = y / r.height - 0.5; // -0.5..0.5
 
       const rotateX = -ny * maxRotate;
       const rotateY = nx * maxRotate;
@@ -281,4 +280,72 @@ function initContactCardTilt() {
       card.style.transform = "";
     });
   });
+}
+
+// ------------------------------
+// 8. Home-only scroll lag / parallax
+// ------------------------------
+function initHomeScrollEffects() {
+  const body = document.body;
+  if (!body || body.dataset.page !== "home") return;
+
+  const prefersReduced =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Keep mobile + reduced motion simple
+  const isSmallScreen =
+    window.matchMedia && window.matchMedia("(max-width: 700px)").matches;
+
+  if (prefersReduced || isSmallScreen) return;
+
+  const hero = document.querySelector(".hero");
+  const sections = Array.from(document.querySelectorAll(".home-section"));
+
+  const layers = [];
+
+  if (hero) {
+    layers.push({ el: hero, factor: 0.16 });
+  }
+
+  sections.forEach((el, index) => {
+    layers.push({
+      el,
+      factor: 0.06 + index * 0.02, // slightly different lag per section
+    });
+  });
+
+  if (!layers.length) return;
+
+  let targetScroll = window.scrollY || 0;
+  let currentScroll = targetScroll;
+  let ticking = false;
+
+  function update() {
+    const lerpFactor = 0.14;
+    currentScroll += (targetScroll - currentScroll) * lerpFactor;
+
+    layers.forEach((layer) => {
+      const offset = -currentScroll * layer.factor;
+      layer.el.style.transform = `translateY(${offset}px)`;
+    });
+
+    if (Math.abs(targetScroll - currentScroll) > 0.5) {
+      requestAnimationFrame(update);
+    } else {
+      ticking = false;
+    }
+  }
+
+  function handleScroll() {
+    targetScroll = window.scrollY || document.documentElement.scrollTop || 0;
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  // Run once in case the page loads scrolled
+  handleScroll();
 }
