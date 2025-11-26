@@ -334,7 +334,20 @@ footer { padding: var(--space-lg) var(--space); color: var(--muted); }
 /* ===============================
    Work page
    =============================== */
-.work-hero {
+/* Home: make work preview cards minimal (no image, no long description) */
+.home-work .wthumb {
+  display: none;
+}
+
+.home-work .wdesc {
+  display: none;
+}
+
+/* Slightly tighten padding when used as a compact preview on home */
+.home-work .wcard .wbody {
+  padding-block: 12px 14px;
+}
+   .work-hero {
   padding: var(--space-lg) var(--space) var(--space-lg);
 }
 
