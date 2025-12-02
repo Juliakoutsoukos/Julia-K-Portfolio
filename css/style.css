@@ -345,6 +345,19 @@ h1 {
   border: 1px solid rgba(148,163,184,0.45);
   box-shadow: var(--shadow-sm);
 }
+/* About page — make the Currently section a compact box */
+.home-about-side {
+  width: fit-content;
+  max-width: 520px;     /* controls box width — adjust smaller or larger */
+  padding: 20px 24px;
+  border-radius: var(--radius-xl);
+  background: rgba(15,23,42,0.96);
+  border: 1px solid rgba(148,163,184,0.5);
+  box-shadow:
+    0 16px 45px rgba(0,0,0,0.85),
+    0 0 24px rgba(255,78,205,0.14);
+}
+
 
 .home-mini-heading {
   font-family: "Space Grotesk", Inter, ui-sans-serif;
