@@ -714,7 +714,7 @@ footer {
 }
 .currently-card {
   width: fit-content;
-  max-width: 380px;
+  max-width: 560px;
   padding: 20px 24px;
   border-radius: var(--radius-xl);
   background: rgba(15,23,42,0.96);
