@@ -943,3 +943,91 @@ footer {
 .home-section {
   will-change: transform;
 }
+/* ===============================
+   Custom Magenta Cursor
+   =============================== */
+
+/* Hide the default cursor on desktop */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  .btn,
+  .gallery-item,
+  .wcard,
+  .contact-card {
+    cursor: none;
+  }
+}
+
+/* Shared cursor base styles */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Inner dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(255, 78, 205, 0.8);
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.12s ease;
+}
+
+/* Outer glow ring */
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 78, 205, 0.6);
+  box-shadow:
+    0 0 24px rgba(255, 78, 205, 0.35),
+    0 0 60px rgba(255, 78, 205, 0.12);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+/* Show cursor when active */
+body.cursor-active .cursor-dot,
+body.cursor-active .cursor-ring {
+  opacity: 1;
+}
+
+/* Hover state for interactive elements (scale + brighter ring) */
+body.cursor-hover .cursor-dot {
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+body.cursor-hover .cursor-ring {
+  transform: translate(-50%, -50%) scale(1.25);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.8),
+    0 0 76px rgba(255, 78, 205, 0.65);
+}
+
+/* Don’t break mobile (use normal cursor / touch) */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}

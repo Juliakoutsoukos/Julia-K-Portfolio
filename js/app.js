@@ -349,3 +349,62 @@ function initHomeScrollEffects() {
   // Run once in case the page loads scrolled
   handleScroll();
 }
+// ===============================
+// Custom Cursor Logic
+// ===============================
+(function () {
+  const dot = document.querySelector(".cursor-dot");
+  const ring = document.querySelector(".cursor-ring");
+  const body = document.body;
+
+  if (!dot || !ring) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+
+  // Smooth follow for ring
+  let ringX = mouseX;
+  let ringY = mouseY;
+
+  const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+  // Track mouse
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    body.classList.add("cursor-active");
+  });
+
+  // So it doesn’t stick if you leave the window
+  window.addEventListener("mouseleave", () => {
+    body.classList.remove("cursor-active");
+  });
+
+  // Hover effects on interactive elements
+  const hoverTargets = document.querySelectorAll(
+    "a, button, .btn, .gallery-item, .wcard, .contact-card"
+  );
+
+  hoverTargets.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      body.classList.add("cursor-hover");
+    });
+    el.addEventListener("mouseleave", () => {
+      body.classList.remove("cursor-hover");
+    });
+  });
+
+  // Animation loop
+  function render() {
+    ringX = lerp(ringX, mouseX, 0.12);
+    ringY = lerp(ringY, mouseY, 0.12);
+
+    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+
+    requestAnimationFrame(render);
+  }
+
+  render();
+})();
