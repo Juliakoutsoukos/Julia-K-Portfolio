@@ -695,10 +695,12 @@ footer {
   position: relative;
   display: grid;
   gap: clamp(16px, 2vw, 24px);
-  grid-template-columns: 1.2fr .8fr;
-  align-items: center;
+  grid-template-columns: 1fr;          /* ⬅ make it single-column */
+  align-items: flex-start;
   border-radius: 999px;
   padding: clamp(18px, 3.2vw, 32px) clamp(22px, 3.6vw, 40px);
+  /* rest of your styles stay the same */
+}
   /* liquid glass look */
   background: radial-gradient(circle at 0% 0%, rgba(248,250,252,0.04), transparent 55%),
               rgba(15,23,42,0.96);
