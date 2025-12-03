@@ -1058,62 +1058,86 @@ body.cursor-hover .cursor-ring {
     0 0 76px rgba(255, 78, 205, 0.65);
 }
 
-/* Don’t break mobile (use normal cursor / touch) */
-@media (pointer: coarse) {
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
-  }
-}
-.contact-section {
-  padding: 3rem 0;
+/* Right-hand contact column */
+
+.contact-main {
+  max-width: 420px;
 }
 
-.contact-intro {
-  color: var(--muted);
-  max-width: 32rem;
-  margin-bottom: 2rem;
+/* Title + description */
+
+.contact-title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
 }
+
+.contact-sub {
+  margin: 0 0 1.8rem;
+  color: var(--muted, #9ca3af);
+  max-width: 24rem;
+}
+
+/* Form layout */
 
 .contact-form {
-  display: grid;
-  gap: 1.2rem;
-  max-width: 450px;
-}
-
-.contact-form label {
-  font-size: 0.95rem;
-  color: var(--text);
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 1rem;
 }
+
+/* Each field */
+
+.contact-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.contact-form .field span {
+  color: var(--muted, #9ca3af);
+}
+
+/* Inputs + textarea */
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-size: 1rem;
-  font-family: inherit;
-  background: var(--surface);
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(4, 7, 17, 0.9);  /* dark but visible */
+  color: #f9fafb;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff4ecd;              /* your magenta */
+  box-shadow: 0 0 0 1px #ff4ecd33;
 }
 
 .contact-form textarea {
-  min-height: 130px;
+  min-height: 140px;
   resize: vertical;
 }
 
-.contact-form button {
-  padding: 0.75rem 1.25rem;
+/* Button */
+
+.contact-button {
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
   border: none;
-  border-radius: 8px;
-  background: var(--accent);
-  color: white;
-  font-size: 1rem;
+  background: #ff4ecd;
+  color: #0f0a12;
+  font-weight: 600;
   cursor: pointer;
+  font: inherit;
 }
 
-.contact-form button:hover {
-  opacity: 0.9;
+.contact-button:hover {
+  filter: brightness(1.05);
 }
+
