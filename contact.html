@@ -50,6 +50,33 @@
           <div class="cc-title">LinkedIn</div>
           <div class="cc-sub">Juliakoutsoukos</div>
         </a>
+        <section class="contact-section container">
+  <h1>Contact Me</h1>
+  <p class="contact-intro">
+    Send me a message and it will go straight to my email.
+  </p>
+
+  <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <input type="hidden" name="form-name" value="contact">
+
+    <label>
+      Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Message
+      <textarea name="message" required></textarea>
+    </label>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
       </div>
 
      

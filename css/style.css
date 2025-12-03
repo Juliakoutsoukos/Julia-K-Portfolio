@@ -1065,3 +1065,55 @@ body.cursor-hover .cursor-ring {
     display: none;
   }
 }
+.contact-section {
+  padding: 3rem 0;
+}
+
+.contact-intro {
+  color: var(--muted);
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 450px;
+}
+
+.contact-form label {
+  font-size: 0.95rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--surface);
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
