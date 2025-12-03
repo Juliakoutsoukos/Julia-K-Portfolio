@@ -1070,9 +1070,11 @@ body.cursor-hover .cursor-ring {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-bottom: 3rem;
-}
 
+  /* NEW: center the whole grid */
+  max-width: 520px;
+  margin: 0 auto 2.5rem; /* auto = centered */
+}
 /* Small cards */
 .contact-card {
   background: rgba(10, 10, 15, 0.5);
