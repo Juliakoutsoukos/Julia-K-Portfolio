@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Figma Mockups — Julia Koutsoukos</title>
+  <title>Figma Design Gallery — Julia Koutsoukos</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,14 +13,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+<body data-page="work">
   <div class="cursor-dot"></div>
   <div class="cursor-ring"></div>
 
-  <script src="js/app.js"></script>
-</body>
-</html>
-
-<body data-page="work-prototyping">
   <!-- Header -->
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
@@ -29,65 +25,136 @@
         <span>JK</span>
       </a>
       <div class="nav-links">
-        <a href="work.html">Work</a>
+        <a href="work.html" aria-current="page">Work</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main class="work-hero">
+  <main class="about">
     <div class="container">
-      <div class="section-head">
-        <h1 class="work-title">Figma</h1>
+      <section class="about-hero">
+        <div class="section-head">
+          <h1 class="work-title">Figma Design Gallery</h1>
+          <p class="work-sub">
+            A collection of mockups created across coursework and design projects,
+            including branding, website concepts, and mobile app interfaces.
+          </p>
+        </div>
+      </section>
+
+      <!-- Group Website Project -->
+      <section class="about-section">
+        <h2 class="sec-title">Group Website Project</h2>
         <p class="work-sub">
-          A collection of high-fidelity mobile app and website design prototypes made through Figma.
+          Logo and website mockups created for a collaborative web design project.
         </p>
-        <a href="work.html" class="back-link">← Back to All Work</a>
-      </div>
 
-      <!-- Gallery -->
-      <section class="assignment-gallery">
+        <div class="assignment-gallery">
+          <a class="gallery-item" href="images/group-logo.png" target="_blank">
+            <div class="gallery-thumb">
+              <img src="images/group-logo.png" alt="Logo design for group website project">
+            </div>
+            <div class="gallery-info">
+              <h2>Group Website Logo</h2>
+              <p class="gallery-meta">
+                Brand identity created in Figma for the group website.
+              </p>
+            </div>
+          </a>
 
-             <!-- SkySounds -->
-      <a href="project-clockface.html" class="gallery-item glass-card">
-        <div class="gallery-thumb">
-          <img src="SkySounds2.jpg">
+          <a class="gallery-item" href="images/group-website.png" target="_blank">
+            <div class="gallery-thumb">
+              <img src="images/group-website.png" alt="Website mockup for group website project">
+            </div>
+            <div class="gallery-info">
+              <h2>Group Website Mockup</h2>
+              <p class="gallery-meta">
+                Website layout and interface design created for the project.
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="gallery-info">
-          <h2>SkySounds Website Mockup</h2>
-          <p class="gallery-meta">Prototyping</p>
-        </div>
-      </a>
+      </section>
 
-      <!-- WELLNESS APP PROJECT -->
-      <a href="project-wellness-app.html" class="gallery-item glass-card">
-        <div class="gallery-thumb">
-          <img src="images/figma.png">
-        </div>
-        <div class="gallery-info">
-          <h2>MSU Student Wellness App</h2>
-          <p class="gallery-meta">Paper Proto • Video • Figma</p>
-        </div>
-      </a>
+      <!-- Spartan Wellness App -->
+      <section class="about-section">
+        <h2 class="sec-title">Spartan Wellness App</h2>
+        <p class="work-sub">
+          Mobile app mockups exploring wellness, structure, and user-focused interface design.
+        </p>
 
-      <!-- LOW-FI CHALLENGE -->
-      <a href="project.lowfi.html" class="gallery-item glass-card">
-        <div class="gallery-thumb">
-          <img src="images/finalproduct.jpg" alt="Low-fidelity prototype sketch screens">
+        <div class="assignment-gallery">
+          <a class="gallery-item" href="images/spartan-wellness.png" target="_blank">
+            <div class="gallery-thumb">
+              <img src="images/spartan-wellness.png" alt="Spartan Wellness app mockup">
+            </div>
+            <div class="gallery-info">
+              <h2>Spartan Wellness App</h2>
+              <p class="gallery-meta">
+                A wellness-focused mobile interface designed in Figma.
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="gallery-info">
-          <h2>1-Hour Low-Fidelity Prototype Challenge</h2>
-          <p class="gallery-meta">Rapid Sketching • Paper Screens</p>
+      </section>
+
+      <!-- Spartan Nav App -->
+      <section class="about-section">
+        <h2 class="sec-title">Spartan Nav App</h2>
+        <p class="work-sub">
+          App screens designed to support campus navigation and improve wayfinding for students.
+        </p>
+
+        <div class="assignment-gallery">
+          <a class="gallery-item" href="images/spartan-nav.png" target="_blank">
+            <div class="gallery-thumb">
+              <img src="images/spartan-nav.png" alt="Spartan Nav app mockup">
+            </div>
+            <div class="gallery-info">
+              <h2>Spartan Nav App</h2>
+              <p class="gallery-meta">
+                Campus navigation interface concepts created in Figma.
+              </p>
+            </div>
+          </a>
         </div>
-      </a>
- <!--Group Prototyping-->
-  <a href="project-group.html" class="gallery-item glass-card">
-        <div class="gallery-thumb">
-          <img src="images/group-prototype.png" alt="SpartanNav">
+      </section>
+
+      <!-- Sky Sounds -->
+      <section class="about-section">
+        <h2 class="sec-title">Sky Sounds</h2>
+        <p class="work-sub">
+          A weather-based music website concept that pairs playlists with current conditions and mood.
+        </p>
+
+        <div class="assignment-gallery">
+          <a class="gallery-item" href="images/SkySounds2.jpg" target="_blank">
+            <div class="gallery-thumb">
+              <img src="images/SkySounds2.jpg" alt="Sky Sounds website mockup">
+            </div>
+            <div class="gallery-info">
+              <h2>Sky Sounds</h2>
+              <p class="gallery-meta">
+                Website mockup for a music experience designed around the weather.
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="gallery-info">
-          <h2>Group Prototyping Project
-          <p class="gallery-meta">Figma • Prototyping • Usability Testing</p>
-        </div>
-      </a>
+      </section>
+
+      <!-- Back button -->
+      <section class="about-section">
+        <a class="btn" href="work.html">← Back to Work</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot">© <span id="y"></span> Julia Koutsoukos</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
