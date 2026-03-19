@@ -1156,3 +1156,13 @@ body.cursor-hover .cursor-ring {
 .figma-back {
   margin-top: 2rem;
 }
+.project-preview img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
