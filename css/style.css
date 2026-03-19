@@ -1099,28 +1099,22 @@ body.cursor-hover .cursor-ring {
     0 0 30px rgba(255, 255, 255, 0.8),
     0 0 76px rgba(255, 78, 205, 0.65);
 }
-<form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  class="contact-form"
->
-  <input type="hidden" name="form-name" value="contact">
+.work-grid {
+  align-items: stretch;
+}
 
-  <label>
-    Name
-    <input type="text" name="name" required>
-  </label>
+.wcard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-  <label>
-    Email
-    <input type="email" name="email" required>
-  </label>
+.wbody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
-  <label>
-    Message
-    <textarea name="message" required></textarea>
-  </label>
-
-  <button type="submit" class="contact-button">Send Message</button>
-</form>
+.wactions {
+  margin-top: auto;
+}
