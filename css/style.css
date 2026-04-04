@@ -325,10 +325,15 @@ main {
 }
 .about-preview,
 .about-preview-artsy {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 60px;
-  align-items: start;
+  position: relative;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .about-preview,
+  .about-preview-artsy {
+    left: -40px;
+  }
 }
 .about-copy {
   max-width: 520px;
