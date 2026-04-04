@@ -7,21 +7,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-page="work">
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
-
-  <!-- Header -->
   <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="brand" aria-label="Home">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span>JK</span>
-      </a>
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Home">Julia Koutsoukos</a>
+
       <div class="nav-links">
         <a href="work.html" aria-current="page">Work</a>
         <a href="about.html">About</a>
@@ -30,95 +24,102 @@
     </nav>
   </header>
 
-  <main class="work-hero">
-    <div class="container">
-      <div class="section-head">
-        <h1 class="work-title">Work</h1>
-        <p class="work-sub">Related projects completed throughout my academic career</p>
+  <main>
+    <section class="hero container">
+      <p class="hero-kicker">Work</p>
+      <h1 class="hero-title">Selected projects across design, research, and development.</h1>
+      <p class="hero-text">
+        A collection of projects completed throughout my academic work, with a
+        focus on prototyping, web design, visual communication, and user research.
+      </p>
+    </section>
+
+    <section class="section container">
+      <div class="project-list" aria-label="Project collection">
+        <article class="project-row">
+          <a class="project-image" href="work-prototyping.html">
+            <img src="images/work-prototyping.jpg" alt="Preview of prototyping projects">
+          </a>
+          <div class="project-content">
+            <p class="project-type">Prototyping</p>
+            <h2 class="project-title">
+              <a href="work-prototyping.html">My Work with Prototyping</a>
+            </h2>
+            <p class="project-meta">Apps, physical prototypes, and iterative design</p>
+            <p class="project-description">
+              A collection of app and physical prototype work demonstrating my
+              process in brainstorming, usability, and design exploration.
+            </p>
+            <a class="text-link" href="work-prototyping.html">View gallery</a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <a class="project-image" href="work-web.html">
+            <img src="images/work-websites.jpg" alt="Preview of websites designed and built">
+          </a>
+          <div class="project-content">
+            <p class="project-type">Web Design & Development</p>
+            <h2 class="project-title">
+              <a href="work-web.html">Website Development</a>
+            </h2>
+            <p class="project-meta">HTML, CSS, responsive design, and deployment</p>
+            <p class="project-description">
+              Front-end website work showing my progression in layout, visual
+              design, responsiveness, and building for the web.
+            </p>
+            <a class="text-link" href="work-web.html">View collection</a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <a class="project-image" href="work-userresearch.html">
+            <img src="images/work-research.jpg" alt="Preview of user research work">
+          </a>
+          <div class="project-content">
+            <p class="project-type">User Research</p>
+            <h2 class="project-title">
+              <a href="work-userresearch.html">Methods for Understanding Users</a>
+            </h2>
+            <p class="project-meta">Interviews, surveys, diary studies, and affinity mapping</p>
+            <p class="project-description">
+              Research work focused on understanding user behavior and turning
+              findings into clearer, more informed design decisions.
+            </p>
+            <a class="text-link" href="work-userresearch.html">View project</a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <a class="project-image" href="work-figma.html">
+            <img src="images/Figma.png" alt="Preview of Figma mockups">
+          </a>
+          <div class="project-content">
+            <p class="project-type">Figma</p>
+            <h2 class="project-title">
+              <a href="work-figma.html">My Figma Mockups</a>
+            </h2>
+            <p class="project-meta">Coursework, website mockups, and app concepts</p>
+            <p class="project-description">
+              A collection of mockups created across multiple classes, including
+              app concepts, website designs, and interface explorations.
+            </p>
+            <a class="text-link" href="work-figma.html">View collection</a>
+          </div>
+        </article>
       </div>
-
-      <section class="work-grid" aria-live="polite">
-        <!-- CARD 1 -->
-        <article class="wcard glass-card" data-cat="ux web">
-          <div class="wthumb">
-            <img src="images/work-prototyping.jpg" alt="Prototyping projects preview">
-          </div>
-          <div class="wbody">
-            <div class="eyebrow">Projects</div>
-            <h2 class="wtitle">My Work with Prototyping</h2>
-            <p class="wmeta">Fall 2025</p>
-            <p class="wdesc">
-              App and physical prototypes. Demonstrating skills in figma,
-              usability, and brainstorming.
-            </p>
-            <div class="wactions">
-              <a class="btn" href="work-prototyping.html">View gallery</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- CARD 2 -->
-        <article class="wcard glass-card" data-cat="web">
-          <div class="wthumb">
-            <img src="images/work-websites.jpg" alt="Websites I've designed preview">
-          </div>
-          <div class="wbody">
-            <div class="eyebrow">Web</div>
-            <h2 class="wtitle">Website Development</h2>
-            <p class="wmeta">Summer 2025</p>
-            <p class="wdesc">
-              Clean, accessible websites. Demonstrating skills and progression
-              with HTML, CSS, and Codespaces.
-            </p>
-            <div class="wactions">
-              <a class="btn" href="work-web.html">View collection</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- CARD 3 -->
-        <article class="wcard glass-card" data-cat="research">
-          <div class="wthumb">
-            <img src="images/work-research.jpg" alt="User research affinity diagram preview">
-          </div>
-          <div class="wbody">
-            <div class="eyebrow">User Research</div>
-            <h2 class="wtitle">Methods for Understanding Users</h2>
-            <p class="wmeta">Fall 2024</p>
-            <p class="wdesc">
-              How I used interviews, models, surveys, diary studies, and affinity
-              diagramming to understand users and turn data into insights.
-            </p>
-            <div class="wactions">
-              <a class="btn" href="work-userresearch.html">View project</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- CARD 4 -->
-        <article class="wcard glass-card" data-cat="web">
-          <div class="wthumb">
-            <img src="images/Figma.png" alt="Figma mockups preview">
-          </div>
-          <div class="wbody">
-            <div class="eyebrow">Figma</div>
-            <h2 class="wtitle">My Figma Mockups</h2>
-            <p class="wmeta">Course Collection</p>
-            <p class="wdesc">
-              Mockups for projects completed in a series of classes, including website,
-              prototyping, and app Figma designs.
-            </p>
-            <div class="wactions">
-              <a class="btn" href="work-figma.html">View collection</a>
-            </div>
-          </div>
-        </article>
-      </section>
-    </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container foot">© <span id="y"></span> Julia Koutsoukos</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="y"></span> Julia Koutsoukos</p>
+      <div class="footer-links">
+        <a href="mailto:Juliakoutsoukos14@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:+18042971672">Phone</a>
+      </div>
+    </div>
   </footer>
 
   <script src="js/app.js"></script>
