@@ -938,3 +938,10 @@ main {
     justify-self: start;
   }
 }
+.home-project img {
+  transition: transform 0.3s ease;
+}
+
+.home-project:hover img {
+  transform: scale(1.03);
+}
