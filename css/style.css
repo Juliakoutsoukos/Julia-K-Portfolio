@@ -947,3 +947,48 @@ main {
     transform: none !important;
   }
 }
+/* ===============================
+   THOUGHT BUBBLE (SOFT VERSION)
+=============================== */
+
+.hero.container {
+  position: relative;
+}
+
+.phone-graphic {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  width: 160px;
+  height: 110px;
+
+  background: #111;
+  border-radius: 80px;
+  opacity: 0.06;
+
+  pointer-events: none;
+}
+
+/* little bubbles */
+.phone-graphic::before,
+.phone-graphic::after {
+  content: "";
+  position: absolute;
+  background: #111;
+  border-radius: 50%;
+  opacity: 0.06;
+}
+
+.phone-graphic::before {
+  width: 18px;
+  height: 18px;
+  bottom: -18px;
+  left: 30px;
+}
+
+.phone-graphic::after {
+  width: 10px;
+  height: 10px;
+  bottom: -30px;
+  left: 18px;
+}
