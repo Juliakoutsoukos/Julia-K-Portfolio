@@ -1039,3 +1039,9 @@ main {
   width: 100%;
   height: auto;
 }
+@media (min-width: 768px) {
+  .about-preview,
+  .about-preview-artsy {
+    margin-left: -40px;
+  }
+}
