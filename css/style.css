@@ -957,7 +957,7 @@ main {
 
 /* remove the featured sizing */
 .artsy-work-grid-even {
-  gap: 20px;
+  gap: 36px;
 }
 .home-project h3 {
   font-size: 17px;
