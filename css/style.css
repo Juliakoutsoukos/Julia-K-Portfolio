@@ -956,33 +956,7 @@ main {
 }
 
 /* remove the featured sizing */
-.home-project-featured {
-  grid-column: auto;
-  max-width: none;
-}
-
 .home-project img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-@media (min-width: 700px) {
-  .artsy-work-grid-even .home-project:nth-child(2),
-  .artsy-work-grid-even .home-project:nth-child(4) {
-    margin-top: 28px;
-  }
-}
-.home-project:nth-child(1) img {
-  aspect-ratio: 4 / 3;
-}
-
-.home-project:nth-child(2) img {
   aspect-ratio: 3 / 4;
-}
-
-.home-project:nth-child(3) img {
-  aspect-ratio: 1 / 1;
-}
-
-.home-project:nth-child(4) img {
-  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
