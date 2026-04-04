@@ -5,25 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Julia Koutsoukos</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-page="contact">
-  <!-- Custom cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
-
-  <!-- Header -->
   <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="brand" aria-label="Home">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span>JK</span>
-      </a>
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Home">Julia Koutsoukos</a>
+
       <div class="nav-links">
         <a href="work.html">Work</a>
         <a href="about.html">About</a>
@@ -32,72 +24,83 @@
     </nav>
   </header>
 
-  <main class="contact-hero">
-    <div class="container">
-      <div class="section-head">
-        <h1 class="work-title">Get in touch</h1>
+  <main>
+    <section class="hero container">
+      <p class="hero-kicker">Contact</p>
+      <h1 class="hero-title">Let’s connect.</h1>
+      <p class="hero-text">
+        I’m always open to opportunities, collaborations, and conversations
+        about design, UX, and creative work.
+      </p>
+    </section>
+
+    <section class="section container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="section-heading">
+            <p class="section-kicker">Reach Out</p>
+            <h2 class="section-title">A few ways to get in touch.</h2>
+          </div>
+
+          <div class="contact-links">
+            <p>
+              <span>Email</span><br>
+              <a href="mailto:Juliakoutsoukos14@gmail.com" class="text-link">
+                Juliakoutsoukos14@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <span>LinkedIn</span><br>
+              <a
+                href="https://www.linkedin.com/in/juliakoutsoukos"
+                target="_blank"
+                rel="noopener"
+                class="text-link"
+              >
+                juliakoutsoukos
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form-block">
+          <form name="contact" method="POST" data-netlify="true" class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+
+            <label>
+              Name
+              <input type="text" name="name" required>
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" required></textarea>
+            </label>
+
+            <button type="submit" class="minimal-button">Send message</button>
+          </form>
+        </div>
       </div>
-
-      <!-- Top cards (centered) -->
-      <div class="contact-top-grid" role="list">
-        <a
-          class="contact-card"
-          role="listitem"
-          href="mailto:Juliakoutsoukos14@gmail.com"
-        >
-          <h3>Email</h3>
-          <p>Juliakoutsoukos14@gmail.com</p>
-        </a>
-
-        <a
-          class="contact-card"
-          role="listitem"
-          href="https://www.linkedin.com/in/juliakoutsoukos"
-          target="_blank"
-          rel="noopener"
-        >
-          <h3>LinkedIn</h3>
-          <p>Juliakoutsoukos</p>
-        </a>
-      </div>
-
-      <!-- Form BELOW the two cards -->
-      <div class="contact-form-wrap">
-        <h2>Send Me a Message</h2>
-
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-
-          <label>
-            Name
-            <input type="text" name="name" required>
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="email" required>
-          </label>
-
-          <label>
-            Message
-            <textarea name="message" required></textarea>
-          </label>
-
-          <button type="submit" class="contact-button">Send Message</button>
-        </form>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container foot">
-      <div>© 2025 Julia Koutsoukos</div>
-      <div>Designed &amp; built by Julia K.</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="y"></span> Julia Koutsoukos</p>
+      <div class="footer-links">
+        <a href="mailto:Juliakoutsoukos14@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:+18042971672">Phone</a>
+      </div>
     </div>
   </footer>
 
   <script src="js/app.js"></script>
 </body>
 </html>
-
-     

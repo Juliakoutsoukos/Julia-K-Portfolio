@@ -267,3 +267,165 @@ main {
     align-items: center;
   }
 }
+.about-layout {
+  display: grid;
+  gap: 40px;
+  align-items: start;
+}
+
+.about-image-wrap {
+  max-width: 420px;
+}
+
+.about-image {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.info-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.info-block h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.info-block p,
+.info-block li {
+  color: var(--muted);
+}
+
+.info-block ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.values-grid .info-block p {
+  max-width: 320px;
+}
+
+@media (min-width: 900px) {
+  .about-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.contact-layout {
+  display: grid;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-links p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-links span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.contact-form-block {
+  max-width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  border-radius: 0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.minimal-button {
+  width: fit-content;
+  margin-top: 12px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.minimal-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+}
+
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}

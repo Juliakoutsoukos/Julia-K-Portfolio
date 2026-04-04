@@ -5,27 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Julia Koutsoukos</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
-
-  <script src="js/app.js"></script>
-</body>
-</html>
 <body data-page="about">
-  <!-- Header -->
   <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="brand" aria-label="Home">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span>JK</span>
-      </a>
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Home">Julia Koutsoukos</a>
+
       <div class="nav-links">
         <a href="work.html">Work</a>
         <a href="about.html" aria-current="page">About</a>
@@ -34,98 +24,147 @@
     </nav>
   </header>
 
-  <main class="about">
-    <div class="container">
-      <!-- Intro pill -->
-      <section class="about-hero">
-        <div class="about-pill glass-pill">
-          <div class="about-text">
-            <h1 class="about-title">Rookie Designer</h1>
-            <p class="about-sub">
-              I’m Julia, an MSU Information Science student focusing on Human-Centered Technology. I have a passion for design and creating for others. I'm interested in prototyping,
-              user research, and turning messy problems into simple, friendly solutions.
+  <main>
+    <section class="hero container">
+      <p class="hero-kicker">About</p>
+      <h1 class="hero-title">Designing with curiosity, clarity, and people in mind.</h1>
+      <p class="hero-text">
+        I’m Julia, an Information Science student at Michigan State University
+        focused on human-centered design. I’m interested in prototyping, user
+        research, and creating experiences that feel thoughtful, intuitive, and useful.
+      </p>
+    </section>
+
+    <section class="section container">
+      <div class="about-layout">
+        <div class="about-image-wrap">
+          <img src="images/Julia.JPG" alt="Portrait of Julia Koutsoukos" class="about-image">
+        </div>
+
+        <div class="about-main">
+          <div class="section-heading">
+            <p class="section-kicker">Background</p>
+            <h2 class="section-title">A student designer building meaningful digital experiences.</h2>
+          </div>
+
+          <div class="about-copy">
+            <p>
+              My work is rooted in human-centered design and shaped by an
+              interest in how technology fits into everyday life. I enjoy taking
+              ideas from early brainstorming into clearer, more usable outcomes.
             </p>
-            <div class="about-cta">
-              <a class="btn primary" href="work.html">See my work</a>
-              <a href="mailto:julakoutsoukos@gmail.com?subject=Resume Request from Portfolio" class="btn primary">Request Resume</a>
-            </div>
-          </div>
-          <figure class="about-photo" aria-label="Headshot">
-            <!-- replace src with your real headshot -->
-            <img src="images/Julia.JPG">
-          </figure>
-        </div>
-      </section>
-
-      <!-- Skills & Tools -->
-      <section class="about-section">
-        <h2 class="sec-title">Skills & tools</h2>
-
-        <div class="skills-grid">
-          <div class="card glass-card">
-            <h3>Core skills</h3>
-            <ul class="list">
-              <li>Prototyping (Physical and Technical)</li>
-              <li>User research</li>
-              <li>Interface & web design</li>
-            </ul>
+            <p>
+              Across my projects, I’ve worked on prototyping, interface design,
+              research, and front-end development. I’m especially drawn to work
+              that balances aesthetics with usability and helps people navigate
+              experiences more easily.
+            </p>
+            <p>
+              I’m still growing as a designer, but that’s part of what excites me.
+              I like exploring new tools, testing ideas, and continuing to refine
+              the way I think about design.
+            </p>
           </div>
 
-          <div class="card glass-card">
-            <h3>Methods I enjoy</h3>
-            <ul class="list">
-              <li>Usability testing & think-aloud</li>
-              <li>Interaction paths</li>
-              <li>Affinity diagramming</li>
-            </ul>
-          </div>
-
-          <div class="card glass-card">
-            <h3>Tools</h3>
-            <ul class="chiplist">
-              <li class="chip">Figma</li>
-              <li class="chip">Github</li>
-              <li class="chip">Microsoft Offices</li>
-              <li class="chip">VS Code</li>
-              <li class="chip">Miro</li>
-              <li class="chip">Python</li>
-              <li class="chip">HTML</li>
-              <li class="chip">CSS</li>
-              <li class="chip">Javascript</li>
-            </ul>
+          <div class="about-links">
+            <a href="work.html" class="text-link">See my work</a>
+            <a href="mailto:julakoutsoukos14@gmail.com?subject=Resume Request from Portfolio" class="text-link">Request resume</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Values -->
-      <section class="about-section">
-        <h2 class="sec-title">What I care about</h2>
-        <div class="values">
-          <div class="value glass-card">
-            <h3>Impact</h3>
-            <p>Designs that not only look good, but do good.</p>
-          </div>
-          <div class="value glass-card">
-            <h3>Growth</h3>
-            <p>Consistently learning, testing, and evolving my craft.</p>
-          </div>
-          <div class="value glass-card">
-            <h3>Exploration</h3>
-            <p>Always experimenting with new ways to solve problems.</p>
-          </div>
+    <section class="section container">
+      <div class="section-heading">
+        <p class="section-kicker">Skills & Tools</p>
+        <h2 class="section-title">What I use and what I’m building on.</h2>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-block">
+          <h3>Core Skills</h3>
+          <ul>
+            <li>Prototyping</li>
+            <li>User research</li>
+            <li>Interface design</li>
+            <li>Web design</li>
+          </ul>
         </div>
-      </section>
 
-      <!-- Fun detail (optional) -->
-      <section class="about-section">
-        <h2 class="sec-title">Outside academics</h2>
-        <p class="about-sub">You can find me at a yoga class or with an iced coffee in my hand! I have two dogs, Apollo and Benji, they are quite literally my everything. I'm passionate about traveling, staying active, and being around the people I love. As cheesy as it sounds, my main goal in life is to live it to the fullest!</p>
-      </section>
-    </div>
+        <div class="info-block">
+          <h3>Methods I Enjoy</h3>
+          <ul>
+            <li>Usability testing</li>
+            <li>Think-aloud studies</li>
+            <li>Affinity diagramming</li>
+            <li>Interaction mapping</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Tools</h3>
+          <ul>
+            <li>Figma</li>
+            <li>Miro</li>
+            <li>VS Code</li>
+            <li>GitHub</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <p class="section-kicker">Values</p>
+        <h2 class="section-title">What matters to me in design.</h2>
+      </div>
+
+      <div class="info-grid values-grid">
+        <div class="info-block">
+          <h3>Impact</h3>
+          <p>I care about design that feels intentional and genuinely useful.</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Growth</h3>
+          <p>I’m always learning, testing, and refining how I approach design work.</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Exploration</h3>
+          <p>I like experimenting with new ideas, systems, and ways of solving problems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <p class="section-kicker">Outside of Design</p>
+        <h2 class="section-title">A little more about me.</h2>
+      </div>
+
+      <div class="about-copy">
+        <p>
+          Outside of academics, you can usually find me at yoga, grabbing an
+          iced coffee, spending time with my dogs Apollo and Benji, or planning
+          my next trip. I care a lot about staying active, being around the
+          people I love, and making the most out of life.
+        </p>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container foot">© <span id="y"></span> Julia Koutsoukos</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="y"></span> Julia Koutsoukos</p>
+      <div class="footer-links">
+        <a href="mailto:Juliakoutsoukos14@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:+18042971672">Phone</a>
+      </div>
+    </div>
   </footer>
 
   <script src="js/app.js"></script>
