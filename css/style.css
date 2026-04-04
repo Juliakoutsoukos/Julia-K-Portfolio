@@ -727,3 +727,60 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* ===============================
+   WORK GALLERY
+=============================== */
+
+.work-gallery {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1fr;
+}
+
+.work-gallery-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work-gallery-image {
+  display: block;
+}
+
+.work-gallery-image img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: #fafafa;
+}
+
+.work-gallery-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-gallery-title {
+  margin: 0 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.work-gallery-title a:hover {
+  opacity: 0.75;
+}
+
+.work-gallery-text {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 42ch;
+}
+
+@media (min-width: 850px) {
+  .work-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 44px 32px;
+  }
+}

@@ -1,57 +1,123 @@
-/* ===============================
-   WORK GALLERY
-=============================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work — Julia Koutsoukos</title>
 
-.work-gallery {
-  display: grid;
-  gap: 36px;
-  grid-template-columns: 1fr;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-.work-gallery-card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="work">
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Home">Julia Koutsoukos</a>
 
-.work-gallery-image {
-  display: block;
-}
+      <div class="nav-links">
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-.work-gallery-image img {
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid var(--line);
-  background: #fafafa;
-}
+  <main>
+    <section class="hero container">
+      <p class="hero-kicker">Work</p>
+      <h1 class="hero-title">Selected projects across design, research, and development.</h1>
+      <p class="hero-text">
+        A collection of academic and creative work focused on prototyping,
+        web design, interface exploration, and user research.
+      </p>
+    </section>
 
-.work-gallery-content {
-  display: flex;
-  flex-direction: column;
-}
+    <section class="section container">
+      <div class="work-gallery">
+        <article class="work-gallery-card">
+          <a href="work-prototyping.html" class="work-gallery-image">
+            <img src="images/work-prototyping.jpg" alt="Preview of prototyping projects">
+          </a>
+          <div class="work-gallery-content">
+            <p class="project-type">Prototyping</p>
+            <h2 class="work-gallery-title">
+              <a href="work-prototyping.html">My Work with Prototyping</a>
+            </h2>
+            <p class="work-gallery-text">
+              App and physical prototype work exploring usability, interaction,
+              and idea development.
+            </p>
+            <a href="work-prototyping.html" class="text-link">View gallery</a>
+          </div>
+        </article>
 
-.work-gallery-title {
-  margin: 0 0 8px;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(22px, 3vw, 28px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
+        <article class="work-gallery-card">
+          <a href="work-web.html" class="work-gallery-image">
+            <img src="images/work-websites.jpg" alt="Preview of web design and development work">
+          </a>
+          <div class="work-gallery-content">
+            <p class="project-type">Web Design & Development</p>
+            <h2 class="work-gallery-title">
+              <a href="work-web.html">Website Development</a>
+            </h2>
+            <p class="work-gallery-text">
+              Websites built through coursework, showing growth in layout,
+              responsiveness, and front-end design.
+            </p>
+            <a href="work-web.html" class="text-link">View collection</a>
+          </div>
+        </article>
 
-.work-gallery-title a:hover {
-  opacity: 0.75;
-}
+        <article class="work-gallery-card">
+          <a href="work-userresearch.html" class="work-gallery-image">
+            <img src="images/work-research.jpg" alt="Preview of user research work">
+          </a>
+          <div class="work-gallery-content">
+            <p class="project-type">User Research</p>
+            <h2 class="work-gallery-title">
+              <a href="work-userresearch.html">Methods for Understanding Users</a>
+            </h2>
+            <p class="work-gallery-text">
+              Research methods including interviews, surveys, and affinity mapping
+              to better understand users.
+            </p>
+            <a href="work-userresearch.html" class="text-link">View project</a>
+          </div>
+        </article>
 
-.work-gallery-text {
-  margin: 0 0 16px;
-  color: var(--muted);
-  font-size: 15px;
-  max-width: 42ch;
-}
+        <article class="work-gallery-card">
+          <a href="work-figma.html" class="work-gallery-image">
+            <img src="images/Figma.png" alt="Preview of Figma mockups">
+          </a>
+          <div class="work-gallery-content">
+            <p class="project-type">Figma</p>
+            <h2 class="work-gallery-title">
+              <a href="work-figma.html">My Figma Mockups</a>
+            </h2>
+            <p class="work-gallery-text">
+              A collection of mockups and interface concepts created for websites,
+              apps, and course projects.
+            </p>
+            <a href="work-figma.html" class="text-link">View collection</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-@media (min-width: 850px) {
-  .work-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 44px 32px;
-  }
-}
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="y"></span> Julia Koutsoukos</p>
+      <div class="footer-links">
+        <a href="mailto:Juliakoutsoukos14@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:+18042971672">Phone</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
