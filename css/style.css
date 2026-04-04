@@ -945,3 +945,29 @@ main {
 .home-project:hover img {
   transform: scale(1.03);
 }
+.artsy-work-grid-even {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .artsy-work-grid-even {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* remove the featured sizing */
+.home-project-featured {
+  grid-column: auto;
+  max-width: none;
+}
+
+.home-project img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+@media (min-width: 700px) {
+  .artsy-work-grid-even .home-project:nth-child(2),
+  .artsy-work-grid-even .home-project:nth-child(4) {
+    margin-top: 28px;
+  }
+}
