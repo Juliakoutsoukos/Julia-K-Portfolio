@@ -963,3 +963,10 @@ main {
   margin-bottom: 10px;
   opacity: 0.95;
 }
+.home-work-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px; /* THIS is the key */
+  margin-bottom: 10px;
+}
