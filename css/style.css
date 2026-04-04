@@ -1097,3 +1097,6 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.gallery-thumb img {
+  border-radius: 14px;
+}
