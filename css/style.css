@@ -971,23 +971,55 @@ main {
   opacity: 0.15;
 }
 
-/* squiggly cord */
-.work-hero::before {
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-graphic {
+  position: absolute;
+  right: -40px;
+  top: 10px;
+  width: 520px;
+  height: 260px;
+  pointer-events: none;
+  opacity: 0.16;
+  z-index: 0;
+}
+
+/* handset */
+.phone-graphic::after {
   content: "";
   position: absolute;
-  bottom: 60px;
-  right: 180px;
-  width: 400px;
-  height: 20px;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  border: 14px solid #111;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 999px;
+  transform: rotate(42deg);
+}
 
+/* cord */
+.phone-graphic::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+  width: 380px;
+  height: 14px;
   background: repeating-linear-gradient(
-    -45deg,
-    #111,
-    #111 4px,
-    transparent 4px,
-    transparent 10px
+    90deg,
+    #111 0 6px,
+    transparent 6px 14px
   );
+  border-radius: 999px;
+}
 
-  border-radius: 20px;
-  opacity: 0.15;
+/* keep text above it */
+.hero > *:not(.phone-graphic) {
+  position: relative;
+  z-index: 1;
 }
