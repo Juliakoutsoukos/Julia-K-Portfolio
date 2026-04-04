@@ -330,6 +330,9 @@ main {
   gap: 60px;
   align-items: start;
 }
+.about-copy {
+  max-width: 520px;
+}
 
 /* ===============================
    HOME WORK GRID
