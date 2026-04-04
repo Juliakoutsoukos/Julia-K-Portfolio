@@ -964,9 +964,10 @@ main {
   opacity: 0.95;
 }
 .home-work-card img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 12px; /* THIS is the key */
-  margin-bottom: 10px;
+  border-radius: 12px;
+  transition: transform 0.25s ease;
+}
+
+.home-work-card:hover img {
+  transform: scale(1.02);
 }
