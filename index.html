@@ -11,135 +11,134 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body data-page="home">
 
-  <!-- Header -->
   <header class="site-header">
     <nav class="site-nav container" aria-label="Primary">
       <a href="index.html" class="brand">Julia Koutsoukos</a>
 
       <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
   <main>
+    <section class="hero hero-artsy container" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">Portfolio</p>
 
-    <!-- HERO -->
-    <section class="hero container" id="top">
-      <p class="hero-kicker">Portfolio</p>
+          <div class="hero-mark" aria-hidden="true"></div>
 
-      <h1 class="hero-title">
-        Human-centered design,<br />
-        presented with clarity.
-      </h1>
+          <h1 class="hero-title hero-title-artsy">
+            Thoughtful digital experiences,<br />
+            shaped by <span class="hero-italic">clarity</span> and care.
+          </h1>
 
-      <p class="hero-text">
-        I’m Julia Koutsoukos, an Information Science student focused on
-        human-centered design. I'm passionate about creating thoughtful digital experiences rooted
-        in usability, research, and visual clarity.
-      </p>
+          <p class="hero-text hero-text-artsy">
+            I’m Julia Koutsoukos, an Information Science student focused on
+            human-centered design. My work explores usability, wellness, and
+            the small details that make digital experiences feel intuitive.
+          </p>
 
-      <div class="hero-actions">
-        <a href="#work" class="text-link">View selected work</a>
-        <a href="about.html" class="text-link">Read more about me</a>
+          <div class="hero-actions">
+            <a href="work.html" class="text-link">View selected work</a>
+            <a href="about.html" class="text-link">Read more about me</a>
+          </div>
+        </div>
+
+        <div class="hero-side-note">
+          <p>
+            Based in Michigan.<br>
+            Interested in UX, research,<br>
+            prototyping, and visual clarity.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT PREVIEW -->
-   <div style="margin-top: 24px;">
-  <a href="about.html" class="text-link">View full about page</a>
-</div>
-      <div class="section-heading">
+    <section class="section container" id="about">
+      <div class="section-heading section-heading-narrow">
         <p class="section-kicker">About</p>
-        <h2 class="section-title">
-          A designer interested in people, systems, and everyday life.
-        </h2>
+        <h2 class="section-title">A designer interested in people, systems, and everyday life.</h2>
       </div>
 
-      <div class="about-preview">
+      <div class="about-preview about-preview-artsy">
         <div class="about-copy">
           <p>
             I’m an Information Science student at Michigan State University
-            with a focus on human-centered design. I like to indulge in work that explores how
+            with a focus on human-centered design. My work explores how
             technology, wellness, and daily routines intersect.
           </p>
 
           <p>
-            I’m especially interested in creating experiences that feel
-            intuitive, useful, and fit to specific audiences.
+            I’m especially interested in creating experiences that feel intuitive,
+            useful, and visually considered — balancing research, usability,
+            and aesthetics in a way that feels thoughtful.
           </p>
+
+          <a href="about.html" class="text-link">View full about page</a>
         </div>
 
-        <div class="about-notes">
-          <p><span>Currently</span> Obtaining a BA in Information Science at MSU</p>
+        <div class="about-notes about-notes-artsy">
+          <p><span>Currently</span> Information Science at Michigan State</p>
           <p><span>Focus</span> UX, research, prototyping</p>
-          <p><span>Interest</span> Design + wellness</p>
+          <p><span>Interest</span> Design, wellness, and everyday usability</p>
         </div>
       </div>
     </section>
 
-    <!-- WORK (UPDATED COMPACT GRID) -->
     <section class="section container" id="work">
-      <div class="section-heading">
-        <p class="section-kicker">Selected Work</p>
-        <h2 class="section-title">A quick look at my work.</h2>
+      <div class="section-heading work-heading-artsy">
+        <div>
+          <p class="section-kicker">Selected Work</p>
+          <h2 class="section-title">A quick look at my work.</h2>
+        </div>
+        <a href="work.html" class="text-link">View all work</a>
       </div>
 
-      <!-- 👇 THIS IS THE NEW GRID -->
-      <div class="home-work-grid">
-
-        <a href="work-prototyping.html" class="home-project">
-          <img src="images/work-prototyping.jpg" alt="">
+      <div class="home-work-grid artsy-work-grid">
+        <a href="work-prototyping.html" class="home-project home-project-featured">
+          <img src="images/work-prototyping.jpg" alt="Preview of prototyping projects">
           <h3>Prototyping</h3>
           <p>Apps & physical prototypes</p>
         </a>
 
         <a href="work-web.html" class="home-project">
-          <img src="images/work-websites.jpg" alt="">
+          <img src="images/work-websites.jpg" alt="Preview of web design work">
           <h3>Web Design</h3>
           <p>HTML, CSS, deployment</p>
         </a>
 
         <a href="work-userresearch.html" class="home-project">
-          <img src="images/work-research.jpg" alt="">
+          <img src="images/work-research.jpg" alt="Preview of user research work">
           <h3>User Research</h3>
           <p>Interviews & insights</p>
         </a>
 
         <a href="work-figma.html" class="home-project">
-          <img src="images/Figma.png" alt="">
+          <img src="images/Figma.png" alt="Preview of Figma work">
           <h3>Figma Work</h3>
           <p>Mockups & concepts</p>
         </a>
-
-      </div>
-
-      <!-- optional link -->
-      <div style="margin-top: 40px;">
-        <a href="work.html" class="text-link">View all work</a>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="y"></span> Julia Koutsoukos</p>
       <div class="footer-links">
         <a href="mailto:Juliakoutsoukos14@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank" rel="noopener">LinkedIn</a>
         <a href="tel:+18042971672">Phone</a>
       </div>
     </div>
   </footer>
 
   <script src="js/app.js"></script>
-
 </body>
 </html>

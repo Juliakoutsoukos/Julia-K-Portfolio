@@ -784,3 +784,157 @@ main {
     gap: 44px 32px;
   }
 }
+/* ===============================
+   ARTSY MINIMAL HOME
+=============================== */
+
+:root {
+  --bg: #faf7f2;
+  --text: #111111;
+  --muted: #6f6a63;
+  --line: #e7e0d7;
+  --accent: #d94ab5;
+}
+
+/* hero */
+.hero-artsy {
+  padding-top: 96px;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 28px;
+  align-items: end;
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero-mark {
+  width: 56px;
+  height: 2px;
+  background: var(--accent);
+  margin: 10px 0 22px;
+}
+
+.hero-title-artsy {
+  max-width: 900px;
+  font-size: clamp(42px, 8vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.hero-italic {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-text-artsy {
+  max-width: 560px;
+  font-size: 18px;
+}
+
+.hero-side-note {
+  max-width: 220px;
+  justify-self: end;
+  align-self: end;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero-side-note p {
+  margin: 0;
+}
+
+/* section rhythm */
+.section-heading-narrow {
+  max-width: 560px;
+}
+
+.work-heading-artsy {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* about */
+.about-preview-artsy {
+  align-items: start;
+}
+
+.about-notes-artsy {
+  padding-top: 24px;
+}
+
+/* home work grid */
+.artsy-work-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.home-project {
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.home-project:hover {
+  transform: translateY(-2px);
+}
+
+.home-project img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  border: 1px solid var(--line);
+  margin-bottom: 12px;
+  background: #f3eee8;
+}
+
+.home-project h3 {
+  margin: 0 0 4px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 19px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.home-project p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.home-project-featured h3 {
+  font-size: 24px;
+}
+
+.home-project-featured p {
+  font-size: 15px;
+}
+
+@media (min-width: 700px) {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .artsy-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-project-featured {
+    grid-column: span 2;
+    max-width: 72%;
+  }
+}
+
+@media (max-width: 699px) {
+  .hero-side-note {
+    justify-self: start;
+  }
+}
