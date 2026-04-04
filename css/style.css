@@ -292,6 +292,12 @@ main {
 .about-preview-artsy {
   display: grid;
   gap: 44px;
+  position: relative;
+  left: 0;
+}
+
+.about-copy {
+  max-width: 520px;
 }
 
 .about-copy p {
@@ -322,21 +328,6 @@ main {
   color: var(--text);
   font-weight: 600;
   margin-right: 6px;
-}
-.about-preview,
-.about-preview-artsy {
-  position: relative;
-  left: 0;
-}
-
-@media (min-width: 768px) {
-  .about-preview,
-  .about-preview-artsy {
-    left: -40px;
-  }
-}
-.about-copy {
-  max-width: 520px;
 }
 
 /* ===============================
@@ -863,6 +854,7 @@ main {
   .about-preview-artsy {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: start;
+    left: -40px;
   }
 }
 
@@ -945,102 +937,13 @@ main {
     height: auto;
   }
 }
-.about-preview,
-.about-preview-artsy {
-  margin-left: -40px;
-}
-/* ===============================
-   PHONE LINE BACKGROUND (CSS ONLY)
-=============================== */
 
-.work-hero {
-  position: relative;
-  overflow: hidden;
-}
-
-/* phone handle */
-.work-hero::after {
-  content: "";
-  position: absolute;
-  right: 60px;
-  bottom: 80px;
-  width: 140px;
-  height: 140px;
-
-  border: 10px solid #111;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 100px;
-
-  transform: rotate(45deg);
-  opacity: 0.15;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero.container {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero.container {
-  position: relative;
-}
-
-.phone-graphic {
-  position: absolute;
-  right: 40px;
-  top: 20px;
-  width: 160px;
-  height: 120px;
-
-  background: #111;
-  border-radius: 80px;
-  opacity: 0.08;
-
-  filter: blur(0.5px);
-}
-
-/* little bubbles */
-.phone-graphic::before,
-.phone-graphic::after {
-  content: "";
-  position: absolute;
-  background: #111;
-  border-radius: 50%;
-  opacity: 0.08;
-}
-
-.phone-graphic::before {
-  width: 18px;
-  height: 18px;
-  bottom: -18px;
-  left: 30px;
-}
-
-.phone-graphic::after {
-  width: 10px;
-  height: 10px;
-  bottom: -30px;
-  left: 18px;
-}
-.hero.container {
-  position: relative;
-}
-
-.thought-bubble {
-  position: absolute;
-  right: 60px;
-  top: 20px;
-  width: 180px;
-  opacity: 0.15;
-  pointer-events: none;
-}
-
-.thought-bubble svg {
-  width: 100%;
-  height: auto;
+@media (max-width: 767px) {
+  .about-preview,
+  .about-preview-artsy,
+  .section-head {
+    margin-left: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+  }
 }
