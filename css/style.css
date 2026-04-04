@@ -959,6 +959,7 @@ main {
 .artsy-work-grid-even {
   gap: 36px;
 }
-.home-project h3 {
-  font-size: 17px;
+.home-project img {
+  margin-bottom: 10px;
+  opacity: 0.95;
 }
