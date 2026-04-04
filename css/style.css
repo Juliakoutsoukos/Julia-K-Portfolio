@@ -14,7 +14,9 @@
 /* ===============================
    BASE
 =============================== */
-
+.gallery-thumb img {
+  border-radius: 14px;
+}
 * {
   box-sizing: border-box;
 }
@@ -1096,7 +1098,4 @@ main {
   .figma-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-.gallery-thumb img {
-  border-radius: 14px;
 }
