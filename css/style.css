@@ -1022,3 +1022,20 @@ main {
   bottom: -30px;
   left: 18px;
 }
+.hero.container {
+  position: relative;
+}
+
+.thought-bubble {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  width: 180px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.thought-bubble svg {
+  width: 100%;
+  height: auto;
+}
