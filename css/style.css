@@ -956,7 +956,9 @@ main {
 }
 
 /* remove the featured sizing */
-.home-project img {
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+.artsy-work-grid-even {
+  gap: 20px;
+}
+.home-project h3 {
+  font-size: 17px;
 }
