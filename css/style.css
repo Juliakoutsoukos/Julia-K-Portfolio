@@ -976,49 +976,32 @@ main {
   overflow: hidden;
 }
 
+.hero.container {
+  position: relative;
+  overflow: hidden;
+}
+
 .phone-graphic {
   position: absolute;
   right: -40px;
   top: 10px;
-  width: 520px;
+  width: 420px;
   height: 260px;
   pointer-events: none;
-  opacity: 0.16;
+  opacity: 0.18;
   z-index: 0;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 260' fill='none'>\
+<path d='M20 210 C 90 180, 120 235, 180 205 S 280 175, 340 195 S 415 220, 470 170' stroke='%23111' stroke-width='8' stroke-linecap='round'/>\
+<path d='M398 92 C 420 62, 448 52, 472 68' stroke='%23111' stroke-width='12' stroke-linecap='round'/>\
+<path d='M388 112 C 412 82, 442 74, 468 88' stroke='%23111' stroke-width='12' stroke-linecap='round'/>\
+</svg>");
 }
 
-/* handset */
-.phone-graphic::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 120px;
-  height: 120px;
-  border: 14px solid #111;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 999px;
-  transform: rotate(42deg);
-}
-
-/* cord */
-.phone-graphic::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 18px;
-  width: 380px;
-  height: 14px;
-  background: repeating-linear-gradient(
-    90deg,
-    #111 0 6px,
-    transparent 6px 14px
-  );
-  border-radius: 999px;
-}
-
-/* keep text above it */
 .hero > *:not(.phone-graphic) {
   position: relative;
   z-index: 1;
