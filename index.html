@@ -11,10 +11,13 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body data-page="home">
+
+  <!-- Header -->
   <header class="site-header">
     <nav class="site-nav container" aria-label="Primary">
-      <a href="index.html" class="brand" aria-label="Home">Julia Koutsoukos</a>
+      <a href="index.html" class="brand">Julia Koutsoukos</a>
 
       <div class="nav-links">
         <a href="#work">Work</a>
@@ -25,12 +28,16 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero container" id="top">
       <p class="hero-kicker">Portfolio</p>
+
       <h1 class="hero-title">
         Human-centered design,<br />
         presented with clarity.
       </h1>
+
       <p class="hero-text">
         I’m Julia Koutsoukos, an Information Science student focused on
         human-centered design. I create thoughtful digital experiences rooted
@@ -43,109 +50,94 @@
       </div>
     </section>
 
+    <!-- ABOUT PREVIEW -->
     <section class="section container" id="about">
       <div class="section-heading">
         <p class="section-kicker">About</p>
-        <h2 class="section-title">A designer interested in people, systems, and everyday life.</h2>
+        <h2 class="section-title">
+          A designer interested in people, systems, and everyday life.
+        </h2>
       </div>
 
       <div class="about-preview">
         <div class="about-copy">
           <p>
-            I’m an Information Science student at Michigan State University with
-            a focus on human-centered design. My work explores how technology,
-            wellness, and daily routines intersect.
+            I’m an Information Science student at Michigan State University
+            with a focus on human-centered design. My work explores how
+            technology, wellness, and daily routines intersect.
           </p>
+
           <p>
-            I’m especially interested in creating experiences that feel intuitive,
-            useful, and visually considered — whether that’s through prototyping,
-            research, or front-end development.
+            I’m especially interested in creating experiences that feel
+            intuitive, useful, and visually considered.
           </p>
         </div>
 
         <div class="about-notes">
-          <p><span>Currently</span> Studying Information Science at Michigan State</p>
-          <p><span>Focus</span> UX, research, prototyping, and web design</p>
-          <p><span>Interest</span> Designing for clarity, wellness, and usability</p>
+          <p><span>Currently</span> MSU Information Science</p>
+          <p><span>Focus</span> UX, research, prototyping</p>
+          <p><span>Interest</span> Design + wellness</p>
         </div>
       </div>
     </section>
 
+    <!-- WORK (UPDATED COMPACT GRID) -->
     <section class="section container" id="work">
-      <div class="section-heading work-heading">
-        <div>
-          <p class="section-kicker">Selected Work</p>
-          <h2 class="section-title">A focused look at what I’ve been building.</h2>
-        </div>
+      <div class="section-heading">
+        <p class="section-kicker">Selected Work</p>
+        <h2 class="section-title">A quick look at my work.</h2>
+      </div>
+
+      <!-- 👇 THIS IS THE NEW GRID -->
+      <div class="home-work-grid">
+
+        <a href="work-prototyping.html" class="home-project">
+          <img src="images/work-prototyping.jpg" alt="">
+          <h3>Prototyping</h3>
+          <p>Apps & physical prototypes</p>
+        </a>
+
+        <a href="work-web.html" class="home-project">
+          <img src="images/work-websites.jpg" alt="">
+          <h3>Web Design</h3>
+          <p>HTML, CSS, deployment</p>
+        </a>
+
+        <a href="work-userresearch.html" class="home-project">
+          <img src="images/work-research.jpg" alt="">
+          <h3>User Research</h3>
+          <p>Interviews & insights</p>
+        </a>
+
+        <a href="work-figma.html" class="home-project">
+          <img src="images/Figma.png" alt="">
+          <h3>Figma Work</h3>
+          <p>Mockups & concepts</p>
+        </a>
+
+      </div>
+
+      <!-- optional link -->
+      <div style="margin-top: 40px;">
         <a href="work.html" class="text-link">View all work</a>
       </div>
-
-      <div class="project-list" aria-label="Featured projects">
-        <article class="project-row">
-          <a class="project-image" href="work-prototyping.html">
-            <img src="images/work-prototyping.jpg" alt="Preview of prototyping projects">
-          </a>
-          <div class="project-content">
-            <p class="project-type">Prototyping</p>
-            <h3 class="project-title">
-              <a href="work-prototyping.html">My Work with Prototyping</a>
-            </h3>
-            <p class="project-meta">Apps & physical prototypes</p>
-            <p class="project-description">
-              A collection of projects exploring interaction, usability, and
-              iterative design through Figma and hands-on prototyping.
-            </p>
-          </div>
-        </article>
-
-        <article class="project-row">
-          <a class="project-image" href="work-web.html">
-            <img src="images/work-websites.jpg" alt="Preview of websites designed and built">
-          </a>
-          <div class="project-content">
-            <p class="project-type">Web Design & Development</p>
-            <h3 class="project-title">
-              <a href="work-web.html">Website Development</a>
-            </h3>
-            <p class="project-meta">HTML, CSS, responsive design, deployment</p>
-            <p class="project-description">
-              Websites that balance visual design, usability, and clean front-end
-              execution across screen sizes.
-            </p>
-          </div>
-        </article>
-
-        <article class="project-row">
-          <a class="project-image" href="work-userresearch.html">
-            <img src="images/work-research.jpg" alt="Preview of user research work">
-          </a>
-          <div class="project-content">
-            <p class="project-type">User Research</p>
-            <h3 class="project-title">
-              <a href="work-userresearch.html">Methods for Understanding Users</a>
-            </h3>
-            <p class="project-meta">Interviews, surveys, affinity mapping</p>
-            <p class="project-description">
-              Research work focused on uncovering user needs and translating
-              insights into stronger design decisions.
-            </p>
-          </div>
-        </article>
-      </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="y"></span> Julia Koutsoukos</p>
       <div class="footer-links">
         <a href="mailto:Juliakoutsoukos14@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/juliakoutsoukos" target="_blank">LinkedIn</a>
         <a href="tel:+18042971672">Phone</a>
       </div>
     </div>
   </footer>
 
   <script src="js/app.js"></script>
+
 </body>
 </html>
