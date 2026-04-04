@@ -287,7 +287,11 @@ main {
 /* ===============================
    ABOUT PREVIEW ON HOME
 =============================== */
-
+.container {
+  width: min(100% - 80px, var(--maxw));
+  margin-left: 100px;
+  margin-right: auto;
+}
 .about-preview,
 .about-preview-artsy {
   display: grid;
