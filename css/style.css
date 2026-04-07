@@ -1185,3 +1185,23 @@ main {
     padding: 18px 18px;
   }
 }
+.case-links {
+  margin-top: 16px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.case-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #1f1f1f;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.case-link:hover {
+  opacity: 0.6;
+  border-color: rgba(0, 0, 0, 0.6);
+}
