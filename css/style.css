@@ -947,3 +947,33 @@ main {
     transform: none !important;
   }
 }
+.case-study {
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 0 20px;
+}
+
+.cs-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.cs-hero p {
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.cs-section {
+  margin-bottom: 50px;
+}
+
+.cs-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cs-section p,
+.cs-section li {
+  color: #444;
+  line-height: 1.6;
+}
