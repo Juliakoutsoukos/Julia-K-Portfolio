@@ -1205,3 +1205,18 @@ main {
   opacity: 0.6;
   border-color: rgba(0, 0, 0, 0.6);
 }
+.case-hero-image {
+  width: 280px;
+  height: 560px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
